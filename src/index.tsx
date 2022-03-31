@@ -5,15 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { useInitial, ComponentPreviews } from './dev';
 import { DevSupport } from '@react-buddy/ide-toolbox';
+import {IntlProvider} from "react-intl";
 
 ReactDOM.render(
   <React.StrictMode>
-    <DevSupport
-      ComponentPreviews={ComponentPreviews}
-      useInitialHook={useInitial}
-    >
-      <App />
-    </DevSupport>
+      <IntlProvider locale="en">
+          <DevSupport
+              ComponentPreviews={ComponentPreviews}
+              useInitialHook={useInitial}
+          >
+              <App />
+          </DevSupport>
+      </IntlProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
