@@ -22,7 +22,118 @@ import {
 
 export const PaletteTree = () => (
   <Palette>
-    <Category name="Date and Time">
+    <Category name="Messages">
+      <Component name="FormattedMessage">
+        <Variant>
+          <FormattedMessage
+              id="id"
+              description=""
+              defaultMessage="Hello, {name}!"
+              values={{
+                name: 'World',
+              }}
+          />
+        </Variant>
+      </Component>
+      <Component name={"FormattedPlural"}>
+        <Variant>
+            <FormattedPlural
+                value={10}
+                one="message"
+                other="messages"
+            />
+        </Variant>
+      </Component>
+      <Component name="FormattedList">
+        <Variant>
+          <FormattedList
+              type="conjunction"
+              value={['one', 'two', 'three']}
+          />
+        </Variant>
+      </Component>
+      <Component name="FormattedListParts">
+        <Variant>
+          <FormattedListParts
+              type="conjunction"
+              value={['one', 'two', 'three']}
+          >
+            {
+              (parts) => {
+                return (
+                    <>
+                      {parts.map((part) => {
+                        return part.value
+                      })}
+                    </>
+                )
+              }
+            }
+          </FormattedListParts>
+        </Variant>
+      </Component>
+      <Component name="FormattedDisplayName">
+        <Variant name={"language"}>
+          <FormattedDisplayName
+              type="language"
+              value="zh-Hans-SG"
+          />
+          <FormattedMessage
+              id="id"
+              description=""
+              defaultMessage="Hello, {name}!"
+              values={{
+                name: 'World',
+              }}
+          />
+        </Variant>
+        <Variant name={"currency"}>
+          <FormattedDisplayName
+              type="currency"
+              value="JPY"
+          />
+        </Variant>
+      </Component>
+
+      <Component name="FormattedNumber">
+        <Variant>
+          <FormattedNumber
+              value={0}
+          />
+        </Variant>
+        <Variant name="Money">
+          <FormattedNumber
+              value={0}
+              style="currency"
+              currency="USD"
+          />
+        </Variant>
+        <Variant name="Integer">
+          <FormattedNumber
+              value={0}
+              maximumFractionDigits={0}
+          />
+        </Variant>
+      </Component>
+      <Component name="FormattedNumberParts">
+        <Variant>
+          <FormattedNumberParts
+              value={0}
+          >
+            {
+              (parts) => {
+                return (
+                    <>
+                      {parts.map((part) => {
+                        return part.value
+                      })}
+                    </>
+                )
+              }
+            }
+          </FormattedNumberParts>
+        </Variant>
+      </Component>
       <Component name="FormattedDate">
         <Variant>
           <FormattedDate
@@ -101,112 +212,6 @@ export const PaletteTree = () => (
               value={0}
               numeric="auto"
               updateIntervalInSeconds={1}
-          />
-        </Variant>
-      </Component>
-    </Category>
-    <Category name="Numbers">
-      <Component name="FormattedNumber">
-        <Variant>
-          <FormattedNumber
-              value={0}
-          />
-        </Variant>
-        <Variant name="Money">
-          <FormattedNumber
-              value={0}
-              style="currency"
-              currency="USD"
-          />
-        </Variant>
-        <Variant name="Integer">
-          <FormattedNumber
-              value={0}
-              maximumFractionDigits={0}
-          />
-        </Variant>
-      </Component>
-      <Component name="FormattedNumberParts">
-        <Variant>
-          <FormattedNumberParts
-              value={0}
-          >
-            {
-              (parts) => {
-                return (
-                    <>
-                      {parts.map((part) => {
-                        return part.value
-                      })}
-                    </>
-                )
-              }
-            }
-          </FormattedNumberParts>
-        </Variant>
-      </Component>
-    </Category>
-    <Category name="Messages">
-      <Component name="FormattedMessage">
-        <Variant>
-          <FormattedMessage
-              id="id"
-              description=""
-              defaultMessage="Hello, {name}!"
-              values={{
-                name: 'World',
-              }}
-          />
-        </Variant>
-      </Component>
-      <Component name={"FormattedPlural"}>
-        <Variant>
-            <FormattedPlural
-                value={10}
-                one="message"
-                other="messages"
-            />
-        </Variant>
-      </Component>
-      <Component name="FormattedList">
-        <Variant>
-          <FormattedList
-              type="conjunction"
-              value={['one', 'two', 'three']}
-          />
-        </Variant>
-      </Component>
-      <Component name="FormattedListParts">
-        <Variant>
-          <FormattedListParts
-              type="conjunction"
-              value={['one', 'two', 'three']}
-          >
-            {
-              (parts) => {
-                return (
-                    <>
-                      {parts.map((part) => {
-                        return part.value
-                      })}
-                    </>
-                )
-              }
-            }
-          </FormattedListParts>
-        </Variant>
-      </Component>
-      <Component name="FormattedDisplayName">
-        <Variant name={"language"}>
-          <FormattedDisplayName
-              type="language"
-              value="zh-Hans-SG"
-          />
-        </Variant>
-        <Variant name={"currency"}>
-          <FormattedDisplayName
-              type="currency"
-              value="JPY"
           />
         </Variant>
       </Component>
