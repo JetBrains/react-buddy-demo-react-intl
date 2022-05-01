@@ -73,28 +73,19 @@ export const PaletteTree = () => (
         </Variant>
       </Component>
       <Component name="FormattedDisplayName">
-        <Variant name={"language"}>
+        <Variant name={"Language"}>
           <FormattedDisplayName
               type="language"
               value="zh-Hans-SG"
           />
-          <FormattedMessage
-              id="id"
-              description=""
-              defaultMessage="Hello, {name}!"
-              values={{
-                name: 'World',
-              }}
-          />
         </Variant>
-        <Variant name={"currency"}>
+        <Variant name={"Currency"}>
           <FormattedDisplayName
               type="currency"
               value="JPY"
           />
         </Variant>
       </Component>
-
       <Component name="FormattedNumber">
         <Variant>
           <FormattedNumber

@@ -5,7 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { useInitial, ComponentPreviews } from './dev';
 import { DevSupport } from '@react-buddy/ide-toolbox';
-import {IntlProvider} from "react-intl";
+import {FormattedMessage, IntlProvider} from "react-intl";
+
+
+const messages = {
+    "greeting": "Hello, {name}!"
+}
 
 ReactDOM.render(
   <React.StrictMode>
