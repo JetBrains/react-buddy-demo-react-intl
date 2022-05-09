@@ -17,8 +17,36 @@ import {
   FormattedPlural,
   FormattedRelativeTime,
   FormattedTime,
-  FormattedTimeParts
+  FormattedTimeParts, useIntl
 } from "react-intl";
+
+export const UseIntlProto = () => {
+  const intl = useIntl();
+}
+
+export const UseIntlFormatNumberProto = () => {
+  const intl = useIntl();
+  const formattedNumber = intl.formatNumber(20.123, {style: "decimal", maximumFractionDigits: 2});
+}
+
+export const UseIntlFormatDateProto = () => {
+  const intl = useIntl();
+  const formattedDate = intl.formatDate(Date.now(), {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric"
+  });
+}
+
+export const UseIntlFormatTimeProto = () => {
+  const intl = useIntl();
+  const formattedTime = intl.formatTime(Date.now());
+}
+
+export const UseIntlFormatListProto = () => {
+  const intl = useIntl();
+  const formattedList = intl.formatList(['Me', 'myself', 'I'], {type: 'conjunction'})
+}
 
 export const PaletteTree = () => (
   <Palette>
@@ -205,6 +233,14 @@ export const PaletteTree = () => (
               updateIntervalInSeconds={1}
           />
         </Variant>
+      </Component>
+      <Component name="useIntl">
+        <Variant proto={UseIntlProto}/>
+        <Variant name="format number" proto={UseIntlFormatNumberProto}/>
+        <Variant name="format date" proto={UseIntlFormatDateProto}/>
+        <Variant name="format time" proto={UseIntlFormatTimeProto}/>
+        <Variant name="format date time range" proto={UseIntlFormatTimeProto}/>
+        <Variant name="format list" proto={UseIntlFormatListProto}/>
       </Component>
     </Category>
   </Palette>
