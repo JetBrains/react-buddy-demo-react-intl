@@ -30,13 +30,20 @@ export default () => (
         docURL="https://formatjs.io/docs/react-intl/components#formattedmessage"
       >
         <Variant>
+          <FormattedMessage id="messageId" />
+        </Variant>
+        <Variant name="defaultMessage">
           <FormattedMessage
-            id="id"
-            description=""
-            defaultMessage="Hello, {name}!"
-            values={{
-              name: "World",
-            }}
+            id="nonexistentMessageId"
+            defaultMessage="Default message"
+            values={{ name: "World" }}
+          />
+        </Variant>
+        <Variant name="with variable">
+          <FormattedMessage
+            id="nonexistentMessageId"
+            defaultMessage="varName = {varName}, in default message"
+            values={{ varName: "varValue" }}
           />
         </Variant>
       </Component>
