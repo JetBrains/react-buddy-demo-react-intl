@@ -32,7 +32,7 @@ export default () => (
         <Variant>
           <FormattedMessage id="messageId" />
         </Variant>
-        <Variant name="defaultMessage">
+        <Variant name="with default value">
           <FormattedMessage
             id="nonexistentMessageId"
             defaultMessage="Default message"
@@ -47,17 +47,26 @@ export default () => (
           />
         </Variant>
       </Component>
-      <Component name="FormattedPlural" docURL="https://formatjs.io/docs/react-intl/components#formattedplural">
+      <Component
+        name="FormattedPlural"
+        docURL="https://formatjs.io/docs/react-intl/components#formattedplural"
+      >
         <Variant>
           <FormattedPlural value={10} one="message" other="messages" />
         </Variant>
       </Component>
-      <Component name="FormattedList" docURL="https://formatjs.io/docs/react-intl/components#formattedlist">
+      <Component
+        name="FormattedList"
+        docURL="https://formatjs.io/docs/react-intl/components#formattedlist"
+      >
         <Variant>
           <FormattedList type="conjunction" value={["one", "two", "three"]} />
         </Variant>
       </Component>
-      <Component name="FormattedListParts" docURL="https://formatjs.io/docs/react-intl/components#formattedlistparts">
+      <Component
+        name="FormattedListParts"
+        docURL="https://formatjs.io/docs/react-intl/components#formattedlistparts"
+      >
         <Variant>
           <FormattedListParts
             type="conjunction"
@@ -75,7 +84,10 @@ export default () => (
           </FormattedListParts>
         </Variant>
       </Component>
-      <Component name="FormattedDisplayName" docURL="https://formatjs.io/docs/react-intl/components#formatteddisplayname">
+      <Component
+        name="FormattedDisplayName"
+        docURL="https://formatjs.io/docs/react-intl/components#formatteddisplayname"
+      >
         <Variant name="Language">
           <FormattedDisplayName type="language" value="zh-Hans-SG" />
         </Variant>
@@ -83,7 +95,10 @@ export default () => (
           <FormattedDisplayName type="currency" value="JPY" />
         </Variant>
       </Component>
-      <Component name="FormattedNumber" docURL="https://formatjs.io/docs/react-intl/components#formattednumber">
+      <Component
+        name="FormattedNumber"
+        docURL="https://formatjs.io/docs/react-intl/components#formattednumber"
+      >
         <Variant>
           <FormattedNumber value={0} />
         </Variant>
@@ -94,7 +109,10 @@ export default () => (
           <FormattedNumber value={0} maximumFractionDigits={0} />
         </Variant>
       </Component>
-      <Component name="FormattedNumberParts" docURL="https://formatjs.io/docs/react-intl/components#formattednumberparts">
+      <Component
+        name="FormattedNumberParts"
+        docURL="https://formatjs.io/docs/react-intl/components#formattednumberparts"
+      >
         <Variant>
           <FormattedNumberParts value={0}>
             {(parts) => {
@@ -109,7 +127,10 @@ export default () => (
           </FormattedNumberParts>
         </Variant>
       </Component>
-      <Component name="FormattedDate" docURL="https://formatjs.io/docs/react-intl/components#formatteddate">
+      <Component
+        name="FormattedDate"
+        docURL="https://formatjs.io/docs/react-intl/components#formatteddate"
+      >
         <Variant>
           <FormattedDate
             value={new Date()}
@@ -119,7 +140,10 @@ export default () => (
           />
         </Variant>
       </Component>
-      <Component name="FormattedDateParts" docURL="https://formatjs.io/docs/react-intl/components#formatteddateparts">
+      <Component
+        name="FormattedDateParts"
+        docURL="https://formatjs.io/docs/react-intl/components#formatteddateparts"
+      >
         <Variant>
           <FormattedDateParts
             value={new Date()}
@@ -139,7 +163,10 @@ export default () => (
           </FormattedDateParts>
         </Variant>
       </Component>
-      <Component name="FormattedTime" docURL="https://formatjs.io/docs/react-intl/components#formattedtime">
+      <Component
+        name="FormattedTime"
+        docURL="https://formatjs.io/docs/react-intl/components#formattedtime"
+      >
         <Variant>
           <FormattedTime
             value={new Date()}
@@ -149,7 +176,10 @@ export default () => (
           />
         </Variant>
       </Component>
-      <Component name="FormattedTimeParts" docURL="https://formatjs.io/docs/react-intl/components#formattedtimeparts">
+      <Component
+        name="FormattedTimeParts"
+        docURL="https://formatjs.io/docs/react-intl/components#formattedtimeparts"
+      >
         <Variant>
           <FormattedTimeParts
             value={new Date()}
@@ -169,7 +199,10 @@ export default () => (
           </FormattedTimeParts>
         </Variant>
       </Component>
-      <Component name="FormattedDateTimeRange" docURL="https://formatjs.io/docs/react-intl/components#formatteddatetimerange">
+      <Component
+        name="FormattedDateTimeRange"
+        docURL="https://formatjs.io/docs/react-intl/components#formatteddatetimerange"
+      >
         <Variant>
           <FormattedDateTimeRange
             from={new Date("2020-1-1")}
@@ -177,7 +210,10 @@ export default () => (
           />
         </Variant>
       </Component>
-      <Component name="FormattedRelativeTime" docURL="https://formatjs.io/docs/react-intl/components#formattedrelativetime">
+      <Component
+        name="FormattedRelativeTime"
+        docURL="https://formatjs.io/docs/react-intl/components#formattedrelativetime"
+      >
         <Variant>
           <FormattedRelativeTime
             value={0}
@@ -186,7 +222,10 @@ export default () => (
           />
         </Variant>
       </Component>
-      <Component name="useIntl" docURL="https://formatjs.io/docs/react-intl/api#useintl-hook">
+      <Component
+        name="useIntl"
+        docURL="https://formatjs.io/docs/react-intl/api#useintl-hook"
+      >
         <Variant proto={UseIntlProto} />
         <Variant name="format number" proto={UseIntlFormatNumberProto} />
         <Variant name="format date" proto={UseIntlFormatDateProto} />
@@ -198,10 +237,9 @@ export default () => (
   </Palette>
 );
 
-
 function UseIntlProto() {
   const intl = useIntl();
-};
+}
 
 function UseIntlFormatNumberProto() {
   const intl = useIntl();
@@ -209,7 +247,7 @@ function UseIntlFormatNumberProto() {
     style: "decimal",
     maximumFractionDigits: 2,
   });
-};
+}
 
 function UseIntlFormatDateProto() {
   const intl = useIntl();
@@ -218,16 +256,16 @@ function UseIntlFormatDateProto() {
     month: "numeric",
     day: "numeric",
   });
-};
+}
 
 function UseIntlFormatTimeProto() {
   const intl = useIntl();
   const formattedTime = intl.formatTime(Date.now());
-};
+}
 
 function UseIntlFormatListProto() {
   const intl = useIntl();
   const formattedList = intl.formatList(["Me", "myself", "I"], {
     type: "conjunction",
   });
-};
+}
